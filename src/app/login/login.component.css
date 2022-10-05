@@ -1,0 +1,13 @@
+.login-wrapper{
+  background-image: url('../../assets/images/arrmeeNational.png');
+  background-size: cover;
+  height: 100vh;
+  width:100vw;
+  background-attachment: fixed;
+
+}
+
+.login{
+  background-color: #025573;
+  border-radius: 5px;
+}

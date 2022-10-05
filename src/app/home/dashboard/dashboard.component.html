@@ -1,0 +1,217 @@
+<section class="wrapper main-wrapper row" style=''>
+
+  <div class='col-xs-12'>
+    <div class="page-title">
+      <div class="pull-left">
+        <h1 class="title">Dashboard</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+  <div class="col-lg-12">
+    <section class="box nobox marginBottom0">
+      <div class="content-body">    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="r4_counter db_box">
+            <i class='pull-left fa fa-dollar icon-md icon-rounded icon-primary'></i>
+            <div class="stats">
+              <h4><strong>100670FCFA</strong></h4>
+              <span>Aujourd'hui</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="r4_counter db_box">
+            <i class='pull-left fa fa-dollar icon-md icon-rounded icon-accent'></i>
+            <div class="stats">
+              <h4><strong>500530FCFA</strong></h4>
+              <span>La semaine</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="r4_counter db_box">
+            <i class='pull-left fa fa-dollar icon-md icon-rounded icon-purple'></i>
+            <div class="stats">
+              <h4><strong>3529450FCFA</strong></h4>
+              <span>Le mois</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="r4_counter db_box">
+            <i class='pull-left fa fa-dollar icon-md icon-rounded icon-warning'></i>
+            <div class="stats">
+              <h4><strong>63634520FCFA</strong></h4>
+              <span>L'année</span>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End .row -->
+      </div>
+    </section></div>
+
+
+  <div class="clearfix"></div>
+
+  <div class="col-xs-12 col-sm-6 col-lg-4">
+    <section class="box ">
+      <div class="content-body">    <div class="row">
+        <div class="col-xs-12">
+          <div class="chart-container">
+            <chart style="display:block;" [options]="options2"></chart>
+          </div>
+        </div>
+      </div> <!-- End .row -->
+      </div>
+    </section>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-lg-4">
+    <section class="box ">
+      <div class="content-body">    <div class="row">
+        <div class="col-xs-12">
+          <div class="chart-container">
+            <chart style="display:block;" [options]="options1"></chart>
+          </div>
+        </div>
+      </div> <!-- End .row -->
+      </div>
+    </section>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-lg-4">
+    <section class="box ">
+      <div class="content-body">    <div class="row">
+        <div class="col-xs-12">
+          <div class="chart-container">
+            <chart style="display:block;" [options]="options3"></chart>
+          </div>
+        </div>
+      </div> <!-- End .row -->
+      </div>
+    </section>
+  </div>
+
+
+  <div class="col-xs-12">
+    <section class="box ">
+      <header class="panel_header">
+        <h2 class="title pull-left">Liste des PDAs ches les centres et pharmacies</h2>
+      </header>
+      <div class="content-body">    <div class="row">
+        <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [iconUrl]="position.icon"  *ngFor="let position of positions" [label]='position.label' [latitude]="position.latitude" [longitude]="position.longitude">
+            <agm-info-window
+              [disableAutoPan]="true"
+              [maxWidth]="300"
+              [isOpen]="openMarkerInfo.label==position.label"
+            >
+              <div style=" height: 230px;" class="container">
+                <div class="row">
+                  <div class="col-sm-4 col-md-4 user-details">
+                    <div class="col-sm-12 col-md-12">
+                      <div class="team-member ">
+                        <div class="team-img">
+                          <img style="width: 301px; height: 225px;" class="hopital img-responsive" src="assets/images/pharmacie.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                          <h3><a [routerLink]="['/home/pharmacie/detail']">Pharmacie Sope Naby</a></h3>
+                          <span class='team-member-edit'><a href="hos-doctor-edit.html"><i class='fa fa-pencil icon-xs'></i></a></span>
+                          <span>Assane Fall</span>
+                        </div>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, blanditiis dicta id libero maxime nesciunt, nihil non provident, quas quibusdam quidem </p>
+                        <ul class="social-icons list-inline list-unstyled">
+                          <li><a href="#"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                          <li><a href="#"><i class="fa fa-google-plus icon-bordered icon-primary icon-xs"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-4 user-details">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="r4_counter db_box">
+                          <i class='pull-left fa fa-dollar icon-md icon-rounded icon-primary'></i>
+                          <div class="stats">
+                            <h4><strong>17500FCFA</strong></h4>
+                            <span>Aujourd'hui</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="r4_counter db_box">
+                          <i class='pull-left fa fa-dollar icon-md icon-rounded icon-accent'></i>
+                          <div class="stats">
+                            <h4><strong>175000FCFA</strong></h4>
+                            <span>La semaine</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="r4_counter db_box">
+                          <i class='pull-left fa fa-dollar icon-md icon-rounded icon-purple'></i>
+                          <div class="stats">
+                            <h4><strong>798000FCFA</strong></h4>
+                            <span>Le mois</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="r4_counter db_box">
+                          <i class='pull-left fa fa-dollar icon-md icon-rounded icon-warning'></i>
+                          <div class="stats">
+                            <h4><strong>9674500FCFA</strong></h4>
+                            <span>L'année</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- End .row -->
+                  </div>
+                  <div class="col-sm-4 col-md-4 user-details">
+                    <div class="">
+                      <div class="r4_counter db_box">
+                        <i class='pull-left fa fa-money icon-md icon-rounded icon-primary'></i>
+                        <div class="stats">
+                          <h4><strong>175 payées</strong></h4>
+                          <span>Nombre d'ordonances payées</span>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="">
+                      <div class="r4_counter db_box">
+                        <i class='pull-left fa fa-ban icon-md icon-rounded icon-primary'></i>
+                        <div class="stats">
+                          <h4><strong>45 non payées</strong></h4>
+                          <span>Nombre d'ordonances non payées</span>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="">
+                      <div class="r4_counter db_box">
+                        <i class='pull-left fa fa-warning icon-md icon-rounded icon-primary'></i>
+                        <div class="stats">
+                          <h4><strong>35 fraudes</strong></h4>
+                          <span>Nombre d'ordonances fraudées</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </agm-info-window>
+          </agm-marker>
+        </agm-map>
+      </div> <!-- End .row -->
+
+      </div>
+    </section></div>
+
+
+</section>

@@ -1,0 +1,203 @@
+<section class="wrapper main-wrapper row" style=''>
+
+  <div class='col-xs-12'>
+    <div class="page-title">
+
+      <div class="pull-left">
+        <h1 class="title">Liste docteurs</h1>
+      </div>
+
+      <div class="pull-right hidden-xs">
+        <ol class="breadcrumb">
+          <li>
+            <a href="index-2.html"><i class="fa fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="hos-doctors.html">Docteurs</a>
+          </li>
+          <li class="active">
+            <strong>liste docteurs</strong>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="col-lg-12">
+    <section class="box ">
+      <header class="panel_header">
+        <br><br>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="field-1" placeholder="Recherche...">
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+        <br>
+        <h2 class="title pull-left">Liste docteurs</h2>
+      </header>
+      <div class="content-body">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="team-member ">
+                  <div class="team-img">
+                    <img class="medecin img-responsive" src="assets/images/medecin.jpg" alt="">
+                  </div>
+                  <div class="team-info">
+                    <h3><a href="hos-doctor-profile.html">Dr. Abdoul Aziz Wane</a></h3>
+                    <span class='team-member-edit'><a href="hos-doctor-edit.html"><i class='fa fa-pencil icon-xs'></i></a></span>
+                    <span>Surgeon</span>
+                  </div>
+                  <p> The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery. </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="team-member ">
+                  <div class="team-img">
+                    <img class="medecin img-responsive" src="assets/images/medecin2.jpg" alt="">
+                  </div>
+                  <div class="team-info">
+                    <h3><a href="hos-doctor-profile.html">Dr. Abdoul Aziz Wane</a></h3>
+                    <span class='team-member-edit'><a href="hos-doctor-edit.html"><i class='fa fa-pencil icon-xs'></i></a></span>
+                    <span>Surgeon</span>
+                  </div>
+                  <p> The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery. </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="team-member ">
+                  <div class="team-img">
+                    <img class="medecin img-responsive" src="assets/images/medecin3.jpg" alt="">
+                  </div>
+                  <div class="team-info">
+                    <h3><a href="hos-doctor-profile.html">Dr. Abdoul Aziz Wane</a></h3>
+                    <span class='team-member-edit'><a href="hos-doctor-edit.html"><i class='fa fa-pencil icon-xs'></i></a></span>
+                    <span>Surgeon</span>
+                  </div>
+                  <p> The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery. </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="team-member ">
+                  <div class="team-img">
+                    <img class="medecin img-responsive" src="assets/images/medecin.jpg" alt="">
+                  </div>
+                  <div class="team-info">
+                    <h3><a href="hos-doctor-profile.html">Dr. Abdoul Aziz Wane</a></h3>
+                    <span class='team-member-edit'><a href="hos-doctor-edit.html"><i class='fa fa-pencil icon-xs'></i></a></span>
+                    <span>Surgeon</span>
+                  </div>
+                  <p> The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <i data-toggle="modal" href="#addHopital" style="position: fixed; right: 0px; bottom: 10px;" class='pull-left fa fa-plus  icon-md icon-rounded icon-accent'></i>
+  </div>
+</section>
+
+<!-- modal start -->
+<div class="modal fade col-xs-12" id="addHopital"  tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog animated fadeInUp">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Ajout docteur</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="field-1" class="control-label">Nom</label>
+              <input [(ngModel)]="hopital.camp" type="text" class="form-control" id="field-1" placeholder="Nom medecin">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="field-2" class="control-label">Téléphone</label>
+              <input [(ngModel)]="hopital.telephone" type="text" class="form-control" id="field-2" placeholder="Prenom medecin">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="field-3" class="control-label">Matricule</label>
+              <input [(ngModel)]="hopital.camp" type="text" class="form-control" id="field-3" placeholder="Matricule du medecin">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="field-5" class="control-label">Téléphone</label>
+
+              <input [(ngModel)]="hopital.telephone" type="text" class="form-control" id="field-5" placeholder="XXXXXXXXX">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="field-7" class="control-label">Centre</label>
+              <input [(ngModel)]="hopital.camp" type="text" class="form-control" id="field-7" placeholder="Centre du medecin">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="field-8" class="control-label">Adresse</label>
+
+              <input [(ngModel)]="hopital.telephone" type="text" class="form-control" id="field-8" placeholder="Adresse du medecin">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 form-group">
+            <label for="field-6" class="control-label">Description</label>
+            <div class="controls">
+              <textarea [(ngModel)]="hopital.description" class="form-control" cols="5" id="field-6"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <image-upload id="imageUpload"
+                  url="https://mili-api.herokuapp.com/api/files/images/upload"
+                  [max]="1"
+                  [buttonCaption]="'Select Images'"
+                  [dropBoxMessage]="'Déposer vos images ici!'"
+                  [fileTooLargeMessage]="'Image trop grande'"
+                  (uploadFinished)="imageFinishedUploading($event)"
+                  (removed)="imageRemoved($event)"
+                  (uploadStateChanged)="uploadStateChange($event)">
+            </image-upload>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <button type="button" class="btn btn-primary" (click)="addHopital();">Valider</button>
+          </div>
+          <div class="col-md-4">
+            <button id="annuler" type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal end -->

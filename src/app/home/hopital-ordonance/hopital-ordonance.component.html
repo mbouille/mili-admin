@@ -1,0 +1,125 @@
+<section class="wrapper main-wrapper row" style=''>
+
+  <div class='col-xs-12'>
+    <div class="page-title">
+
+      <div class="pull-left">
+        <h1 class="title">Ordonances hopitaux</h1>
+      </div>
+      <div [hidden]="true">
+        <qr-code id="qrCode" [value]="qrCodeVelue" [size]="150"></qr-code>
+      </div>
+
+      <div class="pull-right hidden-xs">
+        <ol class="breadcrumb">
+          <li>
+            <a href="index-2.html"><i class="fa fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="hos-doctors.html">Hopitaux</a>
+          </li>
+          <li class="active">
+            <strong>Ordonances hopitaux</strong>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="col-lg-12">
+    <section class="box ">
+      <header class="panel_header">
+        <h2 class="title pull-left">Ordonances des hopitaux</h2>
+        <div class="actions panel_actions pull-right">
+          <a class="box_toggle fa fa-chevron-down"></a>
+        </div>
+      </header>
+      <div class="content-body">
+        <div class="row">
+          <div class="col-md-12">
+
+            <select (change)="changeHopitalSelected();" [(ngModel)]="idHopitalSelected" class="form-control input-lg m-bot15">
+              <option value="neant">Selenetionnez l'hopital</option>
+              <option value={{hopital.id}} *ngFor="let hopital of hopitals">{{hopital.camp}}</option>
+            </select>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="clearfix"></div>
+    </section>
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class="col-sm-12 col-md-12">
+        <div class="team-member ">
+          <div class="team-img">
+            <img style="height: 200px; width: 450px;" class="img-responsive" src="../../../assets/images/dantec.jpg" alt="">
+          </div>
+          <div class="team-info">
+            <h3><a href="hos-doctor-profile.html">Camp Dial DIOP</a></h3>
+            <span class='team-member-edit'><a href="hos-doctor-edit.html"><i class='fa fa-pencil icon-xs'></i></a></span>
+            <span>Point E</span>
+          </div>
+          <p> The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery. </p>
+          <ul class="social-icons list-inline list-unstyled">
+            <li><a href="#"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus icon-bordered icon-primary icon-xs"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="col-lg-12">
+        <section class="box nobox marginBottom0">
+          <div class="content-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="r4_counter db_box">
+                  <i class='pull-left fa fa-file-pdf-o icon-md icon-rounded icon-primary'></i>
+                  <div class="stats">
+                    <h4><strong>525 Ordonances</strong></h4>
+                    <span>Nombre total d'ordonance prescrites</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="r4_counter db_box">
+                  <i class='pull-left fa fa-file-pdf-o icon-md icon-rounded icon-accent'></i>
+                  <div class="stats">
+                    <h4><strong>85 Restants</strong></h4>
+                    <span>Nombre total d'ordonance non scannées</span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- End .row -->
+            <br><br><br>
+            <div class="row">
+              <div class="col-md-7">
+                <div class="team-member ">
+                  <div class="team-info">
+                    <h3><strong>Derniere impression</strong> : 21/04/2018</h3>
+                    <span>par Alioune Badara Seck</span>
+                  </div>
+                  <p> The surgical specialties are the specialties in which an important part of diagnosis and treatmentby surgery. </p>
+
+                </div>
+              </div>
+              <div class="col-md-5">
+                <chart style="height: 180px; display:block;" [options]="options"></chart>
+              </div>
+            </div>
+            </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <i (click)="generatePDF();" style="position: fixed; right: 0px; bottom: 10px;" class='pull-left fa fa-check  icon-md icon-rounded icon-accent'></i>
+</section>

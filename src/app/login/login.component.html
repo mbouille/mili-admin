@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="login-wrapper row">
+    <div id="login" class="login loginpage col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-0 col-xs-12 col-sm-6 col-lg-4">
+      <h1><a href="#" title="Login Page" tabindex="-1">Mili Admin</a></h1>
+
+      <form name="loginform" id="loginform" action="http://jaybabani.com/complete-admin/v5.1/preview/index.html" method="post">
+        <p>
+          <label for="user_login">Nom d'utilisateur<br />
+            <input type="text" name="log" id="user_login" class="input" size="20" /></label>
+        </p>
+        <p>
+          <label for="user_pass">Mot de passe<br />
+            <input type="password" name="pwd" id="user_pass" class="input" size="20" /></label>
+        </p>
+
+        <p class="submit">
+          <input [routerLink]="['/home']" type="button" name="wp-submit" id="wp-submit" class="btn btn-accent btn-block" value="Se connecter" />
+        </p>
+      </form>
+
+      <p id="nav">
+        <a class="pull-left" href="#" title="Password Lost and Found">Forgot password?</a>
+        <a class="pull-right" href="ui-register.html" title="Sign Up">Sign Up</a>
+      </p>
+      <br><br><br>
+
+    </div>
+  </div>
+</div>
